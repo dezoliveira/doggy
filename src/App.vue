@@ -1,24 +1,29 @@
 <template>
-  <img :src="dogImage.message" alt="dog-image"/>
+  <Suspense>
+    <template #default>
+      <DogApi/>
+    </template>
+    <template #fallback>Loading</template>
+  </Suspense>
   <div>
-    <button @click="randomDog">New Dog</button>
+    <button @click="handleChange">New Dog</button>
   </div>
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
-import { useFetchApi } from './composables/useFetchApi';
+import DogApi from './components/DogApi.vue';
+import { defineEmits } from 'vue'
 
-const dogImage = ref('')
+const emit = defineEmits(['random'])
 
-onMounted(() => {
-  randomDog()
-})
-
-const randomDog = async () => {
-  const data = await useFetchApi('https://dog.ceo/api/breeds/image/random')
-  dogImage.value = data.info
+const handleChange = () => {
+  emit('random')
+  console.log(emit)
 }
+
+// const emit = defineEmits(['random'])
+
+
 </script>
 
 <style>
