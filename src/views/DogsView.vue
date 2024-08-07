@@ -6,6 +6,7 @@ import { onMounted, ref } from 'vue';
 import { useFetchApi } from '@/composables/useFetchApi';
 
 const dogImage = ref('')
+const dogArray = ref([])
 
 onMounted(() => {
   getDog()
@@ -14,6 +15,10 @@ onMounted(() => {
 const getDog = async() => {
   const data = await useFetchApi('https://dog.ceo/api/breeds/image/random')
   dogImage.value = data.info
+}
+
+const addDog = () => {
+  dogArray.value.push(dogImage.value)
 }
 </script>
 
@@ -30,8 +35,9 @@ const getDog = async() => {
           </template>
         </Suspense>
       </div>
-      <div>
-        <Button @click="getDog">New Dog</Button>
+      <div class="btn-group">
+        <Button @click="getDog" text="Get Dog"/>
+        <Button @click="addDog" text="Add to Gallery"/>
       </div>
     </div>
   </main>
@@ -44,5 +50,12 @@ const getDog = async() => {
     justify-content: center;
     gap: 8px;
     height: 100vh;
+  }
+
+  .btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
   }
 </style>

@@ -1,10 +1,18 @@
 <template>
     <div>
-        <button class="button" @click="getDog">New Dog</button>
+        <button class="button">{{ text }}</button>
     </div>
 </template>
 <script setup>
+import { ref, onUpdated } from 'vue';
+const props = defineProps(['text'])
+const text = ref('')
 
+text.value = props.text
+
+onUpdated(() => {
+    text.value = props.text
+})
 </script>
 <style scoped>
     .button {

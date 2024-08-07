@@ -1,27 +1,36 @@
 <script setup>
 import { RouterLink } from 'vue-router';
+import Button from '@/components/Button.vue';
 </script>
 <template>
   <main>
     <div class="container">
-      <div>
-        <h1>Welcome</h1>
-      </div>
+      <span style="text-align: center">
+        <h1>
+          Welcome to<strong> Doggy</strong><br/>
+          Your <strong>Doggy Gallery</strong> Here
+          
+        </h1>
+      </span>
       <div>
         <RouterLink to="/dogs">
-          <Button>
-            Let's Start
-          </Button>
+          <Button text="Doggy Now" />
         </RouterLink>
       </div>
     </div>
   </main>
 </template>
 <style scoped>
+  strong {
+    color: brown
+  }
+  
   .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 15px;
     height: 100vh;
   }
 </style>
