@@ -36,8 +36,8 @@ const addDog = () => {
         </Suspense>
       </div>
       <div class="btn-group">
-        <Button @click="getDog" text="Get Dog"/>
-        <Button @click="addDog" text="Add to Gallery"/>
+        <Button @click="getDog" text="Get Dog" btnClass="primary"/>
+        <Button @click="addDog" text="Add to Gallery" btnClass="secondary"/>
       </div>
     </div>
   </main>
