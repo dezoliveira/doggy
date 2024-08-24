@@ -11,6 +11,7 @@ export async function useFetchApi(url, method = 'get'){
     })
 
     data.info = await fetchApi.json()
+    console.log(data.info)
   } catch (error) {
     console.log(error)
   }
