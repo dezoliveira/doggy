@@ -4,6 +4,9 @@ import DogImage from '@/components/DogImage.vue';
 
 import { onMounted, ref } from 'vue';
 import { useFetchApi } from '@/composables/useFetchApi';
+import { useGalleryStore } from '@/store/useGalleryStore';
+
+const store = useGalleryStore()
 
 const dogImage = ref('')
 const dogArray = ref([])
@@ -18,7 +21,8 @@ const getDog = async() => {
 }
 
 const addDog = () => {
-  dogArray.value.push(dogImage.value)
+  // dogArray.value.push(dogImage.value)
+  store.addToGallery(dogImage.value)
 }
 </script>
 

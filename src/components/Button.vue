@@ -1,10 +1,16 @@
 <template>
   <div>
-      <button class="button" :class="btnClass">{{ text }}</button>
+    <button class="button" :class="btnClass">{{ text }}</button>
   </div>
 </template>
 <script setup>
 import { ref, onUpdated } from 'vue';
+import { useGalleryStore } from '@/store/useGalleryStore'
+
+const store = useGalleryStore()
+// const { todoList } = storeToRefs(store)
+// const { toggleCompleted, deleteTodo } = store
+
 const props = defineProps(['text', 'btnClass'])
 const text = ref('')
 const btnClass = ref('primary')
