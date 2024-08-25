@@ -2,20 +2,21 @@ import { defineStore } from "pinia";
 
 export const useGalleryStore = defineStore('gallery', {
   state: () => ({
-    gallery: [],
+    images: [],
     id: 0,
     createdAt: null
-  }),   
+  }),
+
+  persist: true,
 
   actions: {
     addToGallery(image){
-      this.gallery.push({
+      console.log(image)
+      this.images.push({
         image,
         id: this.id++,
         createdAt: new Date()
       })
-
-      console.log(this.gallery)
     }
   }
 })

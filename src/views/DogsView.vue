@@ -9,7 +9,6 @@ import { useGalleryStore } from '@/store/useGalleryStore';
 const store = useGalleryStore()
 
 const dogImage = ref('')
-const dogArray = ref([])
 
 onMounted(() => {
   getDog()
@@ -42,6 +41,7 @@ const addDog = () => {
       <div class="btn-group">
         <Button @click="getDog" text="Get Dog" btnClass="primary"/>
         <Button @click="addDog" text="Add to Gallery" btnClass="secondary"/>
+        <Button @click="this.$router.push('/gallery')" text="Goto Gallery" btnClass="secondary"/>
       </div>
     </div>
   </main>
