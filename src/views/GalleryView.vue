@@ -19,9 +19,11 @@ export default {
   setup() {
     const store = useGalleryStore()
     const { images } = storeToRefs(store)
+    const gallery = JSON.parse(localStorage.getItem("gallery"))
     
     return (
-      images
+      images,
+      gallery
     )
   }
 }
