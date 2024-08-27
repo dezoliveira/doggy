@@ -63,7 +63,7 @@ export default {
     justify-content: space-between;
     padding: 12px 25px;
     width: 100%;
-    background: #4ade80;
+    /* background: #4ade80; */
   }
 
   .navbar .nav-items {
