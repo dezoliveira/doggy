@@ -39,9 +39,26 @@ const addDog = () => {
         </Suspense>
       </div>
       <div class="btn-group">
-        <Button @click="getDog" text="Get Dog" btnClass="primary"/>
-        <Button @click="addDog" text="Add to Gallery" btnClass="secondary"/>
-        <Button @click="this.$router.push('/gallery')" text="Goto Gallery" btnClass="secondary"/>
+        <!-- Get Dog Button -->
+        <Button
+          text="Get Dog"
+          btnClass="primary"
+          @click="getDog" 
+        />
+        <!-- Add to Gallery Button -->
+        <Button
+          text="Add to Gallery"
+          btnClass="secondary"
+          @click="addDog"
+        />
+        <!-- Goto Gallery Button -->
+        <Button
+          text="Goto Gallery"
+          btnClass="secondary"
+          @click="this.$router.push(
+            {name: gallery, path: '/gallery'}
+          )"
+        />
       </div>
     </div>
   </main>
