@@ -15,22 +15,34 @@
         :data-sub-html="renderSub(img)"
       >
         <img :src="img.image.message" class="img-responsive"/>
-        <!-- <h2>{{ img.createdAt }}</h2>
-        <h2>{{ img.id }}</h2> -->
       </a>
     </lightgallery>
+    <div style="text-align: center">
+      <Button
+        text="Voltar"
+        btnClass="primary"
+        @click="this.$router.push({
+          name: 'dogs', path: '/dogs'
+        })"
+      />
+    </div>
   </main>
 </template>
 <script>
 import { useGalleryStore } from '@/store/useGalleryStore';
 import { storeToRefs } from 'pinia';
+
+// Light Gallery
 import Lightgallery from 'lightgallery/vue';
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
 
+import Button from '@/components/Button.vue';
+
 export default {  
   components: {
     Lightgallery,
+    Button
   },
   data: () => ({
     plugins: [lgZoom, lgVideo],
@@ -63,7 +75,7 @@ export default {
   }
 }
 </script>
-<style lang="css">
+<style lang="css" scoped>
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css');
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css');
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-video.css');
