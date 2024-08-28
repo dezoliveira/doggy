@@ -64,6 +64,7 @@ export default {
     padding: 12px 25px;
     width: 100%;
     /* background: #4ade80; */
+    background-color: black
   }
 
   .navbar .nav-items {

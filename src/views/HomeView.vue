@@ -35,7 +35,7 @@ import doggyImage from '@/assets/images/logo2.png'
 
   .logo-img {
     border-radius: 50%;
-    background-color: black;
+    background-color: #a5b4fc;
     padding: 15px;
   }
 
@@ -49,6 +49,6 @@ import doggyImage from '@/assets/images/logo2.png'
     align-items: center;
     justify-content: center;
     gap: 15px;
-    height: 100vh;
+    /* height: 100vh; */
   }
 </style>

@@ -1,11 +1,9 @@
 <template>
-  <div>
+  <div class="dog-image">
     <img
       :src="dogImage.message"
       alt="dog-image"
-      class="dog-image"
-      width="400px"
-      height="400px">
+    >
   </div>
 </template>
 
@@ -24,10 +22,16 @@ onUpdated(() => {
 </script>
 
 <style scoped>
-
-  img{
-    min-height: "100px";
-    max-height: "100px";
+  .dog-image img {
+    width: 400px;
+    height: 400px;
     border-radius: 5%;
+  }
+
+  @media screen and (max-width:720px){
+    .dog-image img {
+      width: 260px;
+      height: 260px;
+    }
   }
 </style>

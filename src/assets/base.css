@@ -6,4 +6,8 @@ body {
   background-color: #a5b4fc;
   margin: 0;
   padding: 0;
+  /* background: url("../assets/images/doggy-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; */
+  /* height: 100vh; */
 }

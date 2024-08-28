@@ -28,6 +28,7 @@ const addDog = () => {
 <template>
   <main>
     <div class="container">
+      <h1 class="title">Escolha um Dog</h1>
       <div>
         <Suspense>
           <template #default>
@@ -52,25 +53,45 @@ const addDog = () => {
           @click="addDog"
         />
         <!-- Goto Gallery Button -->
-        <Button
-          text="Goto Gallery"
-          btnClass="secondary"
-          @click="this.$router.push(
-            {name: gallery, path: '/gallery'}
-          )"
-        />
+        <Router-Link to="/gallery">
+          <Button
+            text="Goto Gallery"
+            btnClass="secondary"
+          />
+        </Router-Link>
       </div>
     </div>
   </main>
 </template>
 <style scoped>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .background {
+    background-image: url('../assets/images/doggy-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+  }
+
   .container { 
     display: flex; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    height: 100vh;
+    height: 80vh;
+    background-color: #fff;
+    width: 70vw;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    border-radius: 15px;
   }
 
   .btn-group {
@@ -78,5 +99,11 @@ const addDog = () => {
     align-items: center;
     justify-content: space-between;
     gap: 5px;
+  }
+
+  @media screen and (max-width:720px) {
+    .container {
+      width: 90vw;
+    }
   }
 </style>

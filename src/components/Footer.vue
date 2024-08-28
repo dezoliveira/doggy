@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <span>
-      <h4>Feito utilizando a dogapi ©todos os direitos reservados</h4>
+      <h2>Feito utilizando a dogapi ©todos os direitos reservados</h2>
     </span>
   </footer>
 </template>
@@ -18,13 +18,14 @@ export default {
     bottom: 0;
     background: black;
     width: 100%;
+    height: 50px;
 
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .footer h4 {
+  .footer h2 {
     color: #fff;
   }
 </style>
