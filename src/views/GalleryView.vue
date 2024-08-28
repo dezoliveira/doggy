@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1 style="text-align: center;">Gallery</h1>
+    <h1>Galeria</h1>
     <ImageGallery :images="images"/>
     <div class="btn-group">
       <Button
@@ -39,6 +39,11 @@ export default {
 }
 </script>
 <style scoped>
+h1 {
+  text-align: center;
+  color: #fff;
+}
+
 .btn-group {
   /* display: flex; */
   position: absolute;
