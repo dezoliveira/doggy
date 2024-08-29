@@ -49,7 +49,7 @@ main {
 }
 .container {
   width: 90vw;
-  height: 90vh;
+  height: 80vh;
   padding: 50px;
   background-color: #fff;
   box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
@@ -65,5 +65,11 @@ h1 {
   position: absolute;
   bottom: 15px;
   right: 15px;
+}
+
+@media screen and (max-width:720px){
+  .container {
+    padding: 12px;
+  }
 }
 </style>

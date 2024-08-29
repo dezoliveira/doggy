@@ -28,4 +28,10 @@ export default {
   .footer h2 {
     color: #fff;
   }
+
+  @media screen and (max-width:720px){
+    .footer h2 {
+      font-size: small;
+    }
+  }
 </style>

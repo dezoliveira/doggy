@@ -42,20 +42,20 @@ const addDog = () => {
       <div class="btn-group">
         <!-- Get Dog Button -->
         <Button
-          text="Get Dog"
+          text="Gerar"
           btnClass="neutral"
           @click="getDog" 
         />
         <!-- Add to Gallery Button -->
         <Button
-          text="Add to Gallery"
+          text="Adicionar"
           btnClass="primary"
           @click="addDog"
         />
         <!-- Goto Gallery Button -->
         <Router-Link to="/gallery">
           <Button
-            text="Goto Gallery"
+            text="Ver Galeria"
             btnClass="secondary"
           />
         </Router-Link>

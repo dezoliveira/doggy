@@ -7,7 +7,7 @@
     </div>
     <div>
       <Button
-        text="Gallery"
+        text="Galeria"
         btnClass="secondary"
         @click="this.$router.push(
           {name: 'gallery', path: '/gallery'}
@@ -38,7 +38,7 @@ export default {
         path: '/dogs'
       },
       {
-        name: 'gallery',
+        name: 'galeria',
         path: '/gallery'
       },
     ])
@@ -55,7 +55,7 @@ export default {
   .navbar {
     /* position: fixed;
     display: block; */
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;

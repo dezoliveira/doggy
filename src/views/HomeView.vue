@@ -9,14 +9,14 @@ import Button from '@/components/Button.vue';
   </div>
   <main>
     <div class="container">
-      <div style="text-align: center;">
+      <div class="hero">
         <!-- <img :src="doggyImage" width="250px" class="logo-img"/> -->
         <h1>
-          Welcome to<strong> Doggy</strong><br/>
-          Your <strong>Doggy Gallery</strong> Here
+          Bem vindo(a) ao<strong> Doggy 🐶</strong><br/>
+          Sua <strong>galeria</strong> esta aqui
         </h1>
         <RouterLink to="/dogs">
-          <Button text="Doggy Now" btnClass="neutral"/>
+          <Button text="Começar" btnClass="neutral"/>
         </RouterLink>
       </div>
     </div>
@@ -33,11 +33,11 @@ import Button from '@/components/Button.vue';
     z-index: -1;
   }
 
-  .logo-img {
-    border-radius: 50%;
-    background-color: #a5b4fc;
-    padding: 15px;
+  .hero {
+    text-align: center;
   }
+
+  .hero 
 
   strong {
     color: brown
@@ -58,17 +58,34 @@ import Button from '@/components/Button.vue';
     margin: 0;
   }
 
-  @media screen and(max-width:720px){
-    .container {
-      padding: 0;
-      align-items: center;
-    }
-  }
+  /* .hero {
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
+    padding: 25px 40px;
+  } */
 
   @media screen and (max-width:720px){
     .container {
       padding: 0;
       align-items: center;
+    }
+
+    .background {
+      background-position-x: 33%;
+    }
+
+    .hero {
+      background-color: rgba(0, 0, 0, .9);
+      color: #fff;
+      padding: 10px;
+    }
+
+    .hero h1 {
+      font-size: x-large;
+    }
+
+    .hero button {
+      background-color: aqua;
     }
   }
 </style>
