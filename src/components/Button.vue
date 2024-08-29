@@ -40,8 +40,13 @@ onUpdated(() => {
     color: #fff;
   }
 
+  .neutral {
+    background-color: black;
+    color: #fff;
+  }
+
   .secondary {
-    background-color: #06b6d4;
+    background-color: blueviolet;
     color: #fff;
   }
 </style>

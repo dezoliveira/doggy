@@ -16,7 +16,7 @@ import Button from '@/components/Button.vue';
           Your <strong>Doggy Gallery</strong> Here
         </h1>
         <RouterLink to="/dogs">
-          <Button text="Doggy Now" btnClass="primary"/>
+          <Button text="Doggy Now" btnClass="neutral"/>
         </RouterLink>
       </div>
     </div>
@@ -52,5 +52,23 @@ import Button from '@/components/Button.vue';
     width: 100%;
     height: 100vh;
     padding-right: 250px;
+  }
+
+  .container h1 {
+    margin: 0;
+  }
+
+  @media screen and(max-width:720px){
+    .container {
+      padding: 0;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width:720px){
+    .container {
+      padding: 0;
+      align-items: center;
+    }
   }
 </style>

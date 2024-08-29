@@ -43,13 +43,13 @@ const addDog = () => {
         <!-- Get Dog Button -->
         <Button
           text="Get Dog"
-          btnClass="primary"
+          btnClass="neutral"
           @click="getDog" 
         />
         <!-- Add to Gallery Button -->
         <Button
           text="Add to Gallery"
-          btnClass="secondary"
+          btnClass="primary"
           @click="addDog"
         />
         <!-- Goto Gallery Button -->
