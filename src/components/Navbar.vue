@@ -78,6 +78,6 @@ export default {
   }
 
   .navbar .nav-items a:hover {
-    color: #4ade80;
+    color: #fcd34d
   }
 </style>

@@ -8,9 +8,9 @@
 
 main {
   height: 80vh;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 a {

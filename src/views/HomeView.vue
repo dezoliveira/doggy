@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 import Button from '@/components/Button.vue';
-import doggyImage from '@/assets/images/logo2.png'
+// import doggyImage from '@/assets/images/logo2.png'
 </script>
 <template>
   <div class="background">
@@ -9,16 +9,16 @@ import doggyImage from '@/assets/images/logo2.png'
   </div>
   <main>
     <div class="container">
-      <span style="text-align: center;">
-        <img :src="doggyImage" width="250px" class="logo-img"/>
+      <div style="text-align: center;">
+        <!-- <img :src="doggyImage" width="250px" class="logo-img"/> -->
         <h1>
           Welcome to<strong> Doggy</strong><br/>
           Your <strong>Doggy Gallery</strong> Here
         </h1>
-      </span>
-      <RouterLink to="/dogs">
-        <Button text="Doggy Now" btnClass="primary"/>
-      </RouterLink>
+        <RouterLink to="/dogs">
+          <Button text="Doggy Now" btnClass="primary"/>
+        </RouterLink>
+      </div>
     </div>
   </main>
 </template>
@@ -46,9 +46,11 @@ import doggyImage from '@/assets/images/logo2.png'
   .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     gap: 15px;
-    /* height: 100vh; */
+    width: 100%;
+    height: 100vh;
+    padding-right: 250px;
   }
 </style>
