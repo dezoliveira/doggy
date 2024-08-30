@@ -4,7 +4,7 @@ import Button from '@/components/Button.vue';
 // import doggyImage from '@/assets/images/logo2.png'
 </script>
 <template>
-  <div class="background">
+  <div class="background" loading="lazy">
 
   </div>
   <main>

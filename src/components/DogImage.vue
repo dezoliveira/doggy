@@ -3,6 +3,7 @@
     <img
       :src="dogImage.message"
       alt="dog-image"
+      loading="lazy"
     >
   </div>
 </template>
