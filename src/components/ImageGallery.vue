@@ -46,14 +46,20 @@ export default {
     onInit: () => {
       console.log('lightGallery has been initialized');
     },
+
     onBeforeSlide: () => {
       console.log('calling before slide');
     },
+
     renderSub: (image) => {
+      const newDate = new Date(image.createdAt).toLocaleDateString()
+      const newTime = new Date(image.createdAt).toLocaleTimeString()
+
+      const newDateTime = newDate + ' as ' + newTime
+
       return `
-        <div style="background: red;">
-          <small>Foto adicionada em: ${image.createdAt}</small></br>
-          <label>Criar com Dog API, todos os direitos reservados</label>
+        <div style="color: #fff; padding: 15px;">
+          <small>Foto adicionada em: ${newDateTime}</small></br>
         </div>
       `
     }
