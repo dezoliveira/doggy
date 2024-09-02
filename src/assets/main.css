@@ -19,6 +19,10 @@ a {
   transition: 0.4s;
   padding: 3px;
 }
+
+a:hover {
+  cursor: pointer;
+}
 /* #app {
   max-width: 1280px;
   margin: 0 auto;

@@ -47,6 +47,7 @@ main {
   align-items: center;
   justify-content: center ;
 }
+
 .container {
   width: 90vw;
   height: 80vh;

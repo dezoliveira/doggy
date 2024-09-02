@@ -71,11 +71,35 @@ export default {
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css');
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-video.css');
 
+/* Custom scroolbar */
+
+/* width */
+.gallery-container::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+.gallery-container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.25);
+  border-radius: 10px;
+}
+
+/* Handle */
+.gallery-container::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
+
+  /* Custom scroolbar */
+  height: 550px;
+  max-height: 550px;
+  overflow-y: scroll;
 }
 
 body {
@@ -87,9 +111,30 @@ body {
 }
 
 .gallery-item img {
-  max-width: 100px;
-  max-height: 100px;
-  min-width: 100px;
-  min-height: 100px;
+  max-width: 90px;
+  max-height: 90px;
+  min-width: 90px;
+  min-height: 90px;
+}
+
+@media screen and (max-width:720px){
+  /* Custom scroolbar */
+
+  /* width */
+  .gallery-container::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .gallery-container {
+    height: 600px;
+    max-height: 600px;
+  }
+  
+  .gallery-item img {
+    max-width: 95px;
+    max-height: 95px;
+    min-width: 95px;
+    min-height: 95px;
+  }
 }
 </style>
