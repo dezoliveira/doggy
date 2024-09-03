@@ -24,7 +24,7 @@ import Button from '@/components/Button.vue';
 </template>
 <style scoped>
   .background {
-    background-image: url('../assets/images/doggy-bg.jpg');
+    background-image: url('../assets/images/doggy-bg-min.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
