@@ -97,7 +97,7 @@ export default {
   justify-content: flex-start;
 
   /* Custom scroolbar */
-  height: 550px;
+  /* height: 550px; */
   max-height: 550px;
   overflow-y: scroll;
 }
